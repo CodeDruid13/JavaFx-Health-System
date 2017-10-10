@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="gotoControlPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.9" prefHeight="484.0" prefWidth="640.0" style="-fx-background-color: #6699FF;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.LoginController">
+   <children>
+      <ImageView fitHeight="515.0" fitWidth="640.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/dcb17017390019.562b96009c321.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="113.0" fitWidth="135.0" layoutX="243.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="85.0" layoutY="155.0" prefHeight="155.0" prefWidth="475.0">
+         <children>
+            <GridPane fx:id="root" prefHeight="255.0" prefWidth="478.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="74.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="401.0" minWidth="10.0" prefWidth="401.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fitHeight="74.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+                     <image>
+                        <Image url="@MaterialIcons/ic_account_circle_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="74.0" fitWidth="50.0" layoutX="10.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@MaterialIcons/ic_lock_outline_black_48dp.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="authUsername" focusColor="#32b278" labelFloat="true" maxWidth="385.0" minWidth="300.0" prefHeight="57.0" prefWidth="385.0" promptText="Enter username" unFocusColor="BLACK" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Eras Medium ITC" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" top="10.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="Please Enter Username">
+                           <font>
+                              <Font name="Eras Demi ITC" size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="authPassword" focusColor="#1a9e44" labelFloat="true" maxWidth="385.0" minWidth="300.0" prefHeight="38.0" prefWidth="385.0" promptText="Enter Password" unFocusColor="#b71c1c" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Eras Medium ITC" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" top="10.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="Please Enter Password">
+                           <font>
+                              <Font name="Eras Demi ITC" size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXPasswordField>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <Separator layoutX="118.0" layoutY="133.0" prefHeight="2.0" prefWidth="408.0" style="-fx-background-color: #09e2a7;">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+      <GridPane layoutX="118.0" layoutY="318.0" prefHeight="30.0" prefWidth="475.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="289.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="186.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Hyperlink fx:id="ForgotPassword" onAction="#gotoResetPanel" prefHeight="24.0" prefWidth="244.0" text="Forgot Password?" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Eras Medium ITC" size="15.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Hyperlink>
+         </children>
+      </GridPane>
+      <JFXButton fx:id="btnLogin" alignment="CENTER" buttonType="RAISED" graphicTextGap="8.0" layoutX="253.0" layoutY="365.0" onAction="#checkforUser" prefWidth="110.0" ripplerFill="#095fb5" style="-fx-background-color: #09e2a7;" stylesheets="@Css/Buttons.css" text="Login" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Separator layoutX="-2.0" layoutY="416.0" prefHeight="3.0" prefWidth="640.0" style="-fx-background-color: #09e2a7;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Separator>
+      <HBox layoutX="-1.0" layoutY="417.0" prefHeight="67.0" prefWidth="640.0" style="-fx-background-color: #ddd1d1;">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="244.0" styleClass="image" stylesheets="@Css/SocialIcons.css">
+               <children>
+                  <ImageView fx:id="google" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@56/Github-Icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="googleplus" fitHeight="35.0" fitWidth="35.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@56/Google-plus-icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="linkedin" fitHeight="35.0" fitWidth="35.0" layoutX="58.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@56/Linkedin.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="youtube" fitHeight="35.0" fitWidth="35.0" layoutX="106.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@56/Youtube-Icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="twitter" fitHeight="35.0" fitWidth="35.0" layoutX="154.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@56/Twitter-Icon-2.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="facebook" fitHeight="35.0" fitWidth="35.0" layoutX="202.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" styleClass="hvr-grow">
+                     <image>
+                        <Image url="@56/facebook-Icon.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </HBox.margin>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </HBox>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </children>
+</AnchorPane>

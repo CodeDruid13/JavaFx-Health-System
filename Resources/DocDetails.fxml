@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane2" prefHeight="560.0" prefWidth="837.0" style="-fx-background-color: #09e2a7;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.signupFXMLConroller">
+   <children>
+      <Pane layoutX="8.0" layoutY="48.0" opacity="0.85" prefHeight="506.0" prefWidth="427.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="#838383" />
+         </effect>
+      </Pane>
+      <Separator layoutX="432.0" layoutY="48.0" orientation="VERTICAL" prefHeight="506.0" prefWidth="4.0" style="-fx-background-color: grey;" />
+      <AnchorPane layoutX="439.0" layoutY="46.0" prefHeight="506.0" prefWidth="398.0">
+         <children>
+            <TableView layoutX="38.0" layoutY="64.0" opacity="0.85" prefHeight="506.0" prefWidth="317.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="150.0" text="PATIENT'S SERVED" />
+                <TableColumn minWidth="0.0" prefWidth="102.0" text="STATUS" />
+                  <TableColumn minWidth="0.0" prefWidth="164.0" text="DATE" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="174.0" layoutY="7.0" prefHeight="29.0" prefWidth="274.0" text="DETAILED INFORMATION.">
+         <font>
+            <Font name="Eras Medium ITC" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="578.0" prefWidth="1077.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlPanelController.ControlPanelController">
+   <children>
+      <Pane id="homePane" fx:id="backgroundPane" layoutY="7.0" prefHeight="578.0" prefWidth="1077.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane layoutX="207.0" layoutY="65.0" opacity="0.8" prefHeight="432.0" prefWidth="793.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane id="hhh" fx:id="ss" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #008ed0;">
+                     
+                              
+                   <children>
+                     <JFXButton id="labels" fx:id="gotoWards" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutY="-1.0" onAction="#regWards" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Master Entry" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgMasterEntry" fitHeight="50.0" fitWidth="50.0" layoutX="104.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@MaterialIcons/ic_grade_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                   </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3cd17f;" GridPane.columnIndex="1">
+                     <children>
+                        <JFXButton id="labels" fx:id="gotoDocPanel" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="1.0" layoutY="-1.0" onAction="#gotoDocPanelReg" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Doctors" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgDoctors" fitHeight="50.0" fitWidth="50.0" layoutX="106.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/30.User.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #008ed0;" GridPane.columnIndex="2">
+                     <children>
+                        <JFXButton id="labels" fx:id="gotoServicesPanel" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="1.0" layoutY="-1.0" onAction="#taketoServices" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Services" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgServices" fitHeight="50.0" fitWidth="50.0" layoutX="117.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/ic_playlist_add_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #009ed0;" GridPane.rowIndex="1">
+                     <children>
+                        <JFXButton id="labels" fx:id="btnUsers" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutY="-1.0" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Users" textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgUsers" fitHeight="50.0" fitWidth="50.0" layoutX="104.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/ic_group_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3ce17f;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <JFXButton id="labels" fx:id="gotoNursePanel" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="-1.0" onAction="#gotoNursePanelReg" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Nurses" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgNurses" fitHeight="50.0" fitWidth="50.0" layoutX="109.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/30.User.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #009ed0;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <JFXButton id="labels" fx:id="gotoStatsPanel" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="-1.0" layoutY="-1.0" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Statistics" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgStats" fitHeight="50.0" fitWidth="50.0" layoutX="117.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/ic_assessment_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00aed0;" GridPane.rowIndex="2">
+                     <children>
+                        <JFXButton id="labels" fx:id="btnSettings" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="-1.0" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Settings" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgSettings" fitHeight="50.0" fitWidth="50.0" layoutX="108.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/ic_settings_white_48pt_3x.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #3cf17f;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <JFXButton id="labels" fx:id="gotoPatients" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="-2.0" onAction="#gotoPatientRegistration" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Patients" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgPatients" fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/30.User.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #00aed0;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <JFXButton id="labels" fx:id="gotoAdmissionsPanel" alignment="BOTTOM_CENTER" buttonType="RAISED" layoutX="-1.0" layoutY="-3.0" prefHeight="152.0" prefWidth="264.0" style="-fx-background-color: #01e5a7;" text="Admissions" textFill="WHITE">
+                           <font>
+                              <Font name="Eras Medium ITC" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fx:id="imgAdmissions" fitHeight="50.0" fitWidth="50.0" layoutX="119.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@MaterialIcons/ic_dns_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <HBox prefHeight="50.0" prefWidth="1077.0" style="-fx-background-color: #01e5a7;">
+               <children>
+                  <JFXHamburger fx:id="hamburger" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT" prefHeight="65.0" prefWidth="51.0" spacing="6.0">
+                     <effect>
+                        <DropShadow blurType="GAUSSIAN" height="68.82" radius="21.152499999999996" width="17.79" />
+                     </effect>
+                  </JFXHamburger>
+               </children>
+            </HBox>
+            <Separator layoutY="50.0" prefHeight="5.0" prefWidth="1085.0" style="-fx-background-color: black;" />
+            <JFXDrawer fx:id="drawer" defaultDrawerSize="185.0" layoutY="65.0" prefHeight="309.0" prefWidth="203.0" />
+         </children></Pane>
+   </children>
+</AnchorPane>

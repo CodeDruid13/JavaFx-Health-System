@@ -1,0 +1,21 @@
+.choicebox{
+    -fx-border-width: 1px 0px 0px 5px;
+    -fx-border-radius: 1px;
+    -fx-background-radius: 0px;
+    -fx-text-fill: #4E4F52;
+    -fx-background-color: #81d4fa;
+    -fx-font-weight:700;
+    -fx-font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+}
+
+.choicebox:focused{
+    -fx-border-width: 0px 0px 0px 0px;
+
+}
+.choicebox:pressed{
+    -fx-text-fill: white;
+}
+.choicebox:hover{
+    -fx-background-color: #ff80ab;
+    -fx-text-fill: white;
+}

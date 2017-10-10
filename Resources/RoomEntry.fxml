@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane opacity="0.8" prefHeight="482.0" prefWidth="1000.0" style="-fx-background-color: #09e2a7;" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Ward.WardController">
+   <children>
+      <Pane layoutX="8.0" layoutY="96.0" opacity="0.7" prefHeight="374.0" prefWidth="357.0" style="-fx-background-color: #fff;" />
+      <Label layoutX="14.0" layoutY="14.0" mouseTransparent="true" prefHeight="25.0" prefWidth="246.0" text="     WARD INFORMATION." textFill="WHITE">
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font></Label>
+      <Line endX="100.0" layoutX="115.0" layoutY="92.0" startX="-100.0" />
+      <Label layoutX="15.0" layoutY="112.0" mouseTransparent="true" prefHeight="32.0" prefWidth="201.0" text="        ROOM DETAILS">
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font></Label>
+      <Line endX="100.0" layoutX="115.0" layoutY="155.0" startX="-100.0" />
+      <AnchorPane layoutX="370.0" layoutY="8.0" prefHeight="467.0" prefWidth="616.0">
+         <children>
+            <Pane layoutX="5.0" layoutY="5.0" opacity="0.8" prefHeight="60.0" prefWidth="604.0" style="-fx-background-color: #fff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <GridPane layoutX="24.0" layoutY="5.0" prefHeight="35.0" prefWidth="566.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.0" minWidth="10.0" prefWidth="350.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="216.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXTextField fx:id="filterField" maxWidth="391.0" minWidth="194.0" prefHeight="44.0" prefWidth="390.0" promptText="Enter Ward Name">
+                           <font>
+                              <Font name="Eras Demi ITC" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </JFXTextField>
+                        <ImageView fitHeight="34.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@MaterialIcons/ic_search_18pt_3x.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="btnSearch" prefHeight="37.0" prefWidth="105.0" text="." GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Eras Medium ITC" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets right="79.0" />
+                           </padding>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <TableView fx:id="tableWard" layoutX="4.0" layoutY="89.0" prefHeight="374.0" prefWidth="616.0">
+              <columns>
+                <TableColumn fx:id="columnWardname" prefWidth="169.0" text="ROOM NAME" />
+                <TableColumn fx:id="columnWardType" prefWidth="199.0" text="ROOM YPE" />
+                  <TableColumn fx:id="columnNumberofBeds" minWidth="0.0" prefWidth="104.0" text="NO. OF BEDS" />
+                  <TableColumn fx:id="columnCharges" prefWidth="143.0" text="CHARGES" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="14.0" layoutY="192.0" prefHeight="254.0" prefWidth="347.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="242.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="56.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXTextField fx:id="txtWardName" promptText="Please Enter Room Name">
+               <font>
+                  <Font name="Eras Medium ITC" size="17.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+            <JFXComboBox fx:id="ChooseType" onAction="#selectWardType" prefHeight="35.0" prefWidth="245.0" promptText="Please Select RoomType" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtWardNumberofBeds" layoutX="10.0" layoutY="14.0" promptText="Please Enter Number of Beds" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Eras Medium ITC" size="17.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="txtChargesperBed" layoutX="10.0" layoutY="114.0" promptText="Please Enter Charges Per Bed" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Eras Medium ITC" size="17.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+            <JFXButton fx:id="btnSaveWard" buttonType="RAISED" onAction="#addWard" prefHeight="35.0" prefWidth="90.0" ripplerFill="#7c0000" text="Save" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="10.0" prefHeight="35.0" prefWidth="90.0" text="New" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <JFXButton layoutX="257.0" layoutY="10.0" prefHeight="35.0" prefWidth="90.0" text="Update" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <JFXButton buttonType="RAISED" layoutX="257.0" layoutY="61.0" prefHeight="35.0" prefWidth="90.0" ripplerFill="#8a0a0a" text="Delete" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

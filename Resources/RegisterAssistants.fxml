@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Registration.RegistrationController">
+   <children>
+      <Separator layoutX="1.0" layoutY="655.0" prefHeight="0.0" prefWidth="800.0" style="-fx-background-color: black;" />
+      <Separator layoutX="301.0" layoutY="111.0" prefHeight="9.0" prefWidth="200.0">
+         <effect>
+            <DropShadow />
+         </effect></Separator>
+      <ImageView fitHeight="79.0" fitWidth="114.0" layoutX="361.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@avatar.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <GridPane layoutX="51.0" layoutY="197.0" prefHeight="45.0" prefWidth="705.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="0.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="322.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="315.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+               <image>
+                  <Image url="@MaterialIcons/ic_perm_identity_white_48pt_3x.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="txtFirstName" focusColor="#a84040" labelFloat="true" maxWidth="400.0" minWidth="306.0" prefHeight="45.0" prefWidth="306.0" promptText="Please Enter First Name" unFocusColor="#00c2a8" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+            <JFXTextField fx:id="txtLastName" focusColor="#a84040" labelFloat="true" layoutX="63.0" layoutY="10.0" maxWidth="400.0" minWidth="258.0" prefHeight="45.0" prefWidth="316.0" promptText="Please Enter Last Name" unFocusColor="#00c2a8" GridPane.columnIndex="2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" layoutX="614.0" layoutY="71.0">
+         <padding>
+            <Insets top="15.0" />
+         </padding>
+      </HBox>
+      <JFXButton fx:id="registerBtn" buttonType="RAISED" layoutX="222.0" layoutY="670.0" prefHeight="26.0" prefWidth="100.0" ripplerFill="#96421a" style="-fx-background-color: #01e5a7;" stylesheets="@Css/Buttons.css" text="New">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <Label layoutX="313.0" layoutY="3.0" text="REGISTRATION PANEL">
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="51.0" layoutY="272.0" prefHeight="30.0" prefWidth="705.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="0.0" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="299.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="47.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="285.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+               <image>
+                  <Image url="@MaterialIcons/ic_add_location_white_48dp.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="UserName" focusColor="#a84040" labelFloat="true" maxWidth="400.0" minWidth="290.0" prefHeight="45.0" prefWidth="290.0" promptText="Please Enter the Address" unFocusColor="#00c2a8" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+            <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <image>
+                  <Image url="@MaterialIcons/id_number_avatar.jpg" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="itxtdNo" focusColor="#a84040" labelFloat="true" maxWidth="400.0" minWidth="222.0" prefHeight="45.0" prefWidth="222.0" promptText="Please Enter ID Number" unFocusColor="#47c3be" GridPane.columnIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+         </children>
+      </GridPane>
+      <GridPane layoutX="59.0" layoutY="331.0" prefHeight="50.0" prefWidth="690.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="339.0" minWidth="10.0" prefWidth="64.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="636.0" minWidth="10.0" prefWidth="626.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="22.0" prefWidth="217.0" text="    Please Select Gender" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Eras Medium ITC" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+               <image>
+                  <Image url="@MaterialIcons/16729-200.png" />
+               </image>
+            </ImageView>
+            <JFXCheckBox text="Male" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="11.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXCheckBox>
+            <JFXCheckBox text="Female" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Eras Medium ITC" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXCheckBox>
+         </children>
+      </GridPane>
+      <GridPane layoutX="59.0" layoutY="413.0" prefHeight="30.0" prefWidth="705.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="0.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="295.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="63.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="285.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+               <image>
+                  <Image url="@MaterialIcons/ic_contact_phone_white_48dp.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="txtpNumber" focusColor="#a84040" labelFloat="true" maxWidth="400.0" minWidth="296.0" prefHeight="45.0" prefWidth="296.0" promptText="Please Enter  Phone Number" unFocusColor="#269ba1" GridPane.columnIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+            <ImageView fitHeight="40.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT">
+               <image>
+                  <Image url="@MaterialIcons/ic_email_white_48dp.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <JFXTextField fx:id="txtemail" focusColor="#a84040" labelFloat="true" maxWidth="400.0" minWidth="273.0" prefHeight="44.0" prefWidth="294.0" promptText="Please Enter Email" unFocusColor="#3ebcb8" GridPane.columnIndex="3">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </JFXTextField>
+         </children>
+      </GridPane>
+      <JFXTextField layoutX="120.0" layoutY="139.0" maxWidth="304.0" minWidth="296.0" prefHeight="40.0" prefWidth="304.0" promptText="Please Enter The Doctor's Tag">
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXTextField>
+      <JFXTextArea layoutX="120.0" layoutY="465.0" maxWidth="634.0" minWidth="634.0" prefHeight="125.0" prefWidth="634.0" promptText="Please Enter Qualifications">
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXTextArea>
+      <JFXDatePicker layoutX="120.0" layoutY="608.0" prefHeight="40.0" prefWidth="296.0" promptText="Please select Date of Joining">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </JFXDatePicker>
+      <JFXButton fx:id="registerBtn1" buttonType="RAISED" layoutX="374.0" layoutY="670.0" prefHeight="26.0" prefWidth="100.0" ripplerFill="#96421a" style="-fx-background-color: #ef9a9a;" stylesheets="@Css/Buttons.css" text="Save">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="registerBtn11" buttonType="RAISED" layoutX="527.0" layoutY="670.0" prefHeight="26.0" prefWidth="100.0" ripplerFill="#96421a" style="-fx-background-color: #ffcc80;" stylesheets="@Css/Buttons.css" text="Get Data">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

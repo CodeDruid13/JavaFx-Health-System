@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SplashScreen.SplashFXMLController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
+         <image>
+            <Image url="@Preloaders/02-loading-blossom-2x.gif" />
+         </image>
+      </ImageView>
+      <Label prefHeight="27.0" prefWidth="343.0" text="Loading Components... Please be Patient" textFill="#750202" StackPane.alignment="TOP_LEFT">
+         <StackPane.margin>
+            <Insets left="200.0" top="25.0" />
+         </StackPane.margin>
+         <font>
+            <Font name="Eras Medium ITC" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ImageView fitHeight="98.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="TOP_LEFT">
+         <image>
+            <Image url="@one.png" />
+         </image>
+      </ImageView>
+   </children>
+</StackPane>

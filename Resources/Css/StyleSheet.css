@@ -1,0 +1,22 @@
+
+#labels:hover{
+   -fx-background-color: #ef9a9a; 
+   -fx-text-decoration-line: underline ;
+  
+   -fx-text-underline-position:below; 
+}
+#labels:pressed{
+    -fx-background-color: #ef9a9a ; 
+ 
+}
+
+#navLabels:hover{
+  
+   -fx-text-fill:#008ed0;
+   
+}
+#navLabels:pressed{
+    -fx-background-color:  #00f6a7; 
+    -fx-text-fill:#fff;
+}
+
